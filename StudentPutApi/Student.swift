@@ -14,21 +14,23 @@ struct Student {
     // properties
     
     let name: String
-    static let nameKey = "name"
+    static let nameKey = "nombre"
     
     var dictionaryRepresentation: [String : AnyObject] {
         
         // name value --> ["name"}
         return [Student.nameKey: name as Any as AnyObject]
         
-        var jsonData: Data? {
-            
-            return try? JSONSerialization.data(withJSONObject: dictionaryRepresentation, options: .prettyPrinted)
-        }
-    }
+            }
 }
 
 extension Student {
+    
+    var jsonData: Data? {
+        
+        return try? JSONSerialization.data(withJSONObject: dictionaryRepresentation, options: .prettyPrinted)
+    }
+
     
     init?(dictionary: [String : String]) {
         
