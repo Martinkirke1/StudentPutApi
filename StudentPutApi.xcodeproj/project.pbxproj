@@ -14,6 +14,7 @@
 		D9CC9CE31DB7D8A100C4C8E2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CE21DB7D8A100C4C8E2 /* Student.swift */; };
 		D9CC9CE71DB7DC7B00C4C8E2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CE61DB7DC7B00C4C8E2 /* NetworkController.swift */; };
 		D9CC9CE91DB7DCE500C4C8E2 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CE81DB7DCE500C4C8E2 /* StudentController.swift */; };
+		D9CC9CEB1DB7F18200C4C8E2 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CEA1DB7F18200C4C8E2 /* StudentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D9CC9CE21DB7D8A100C4C8E2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D9CC9CE61DB7DC7B00C4C8E2 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		D9CC9CE81DB7DCE500C4C8E2 /* StudentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		D9CC9CEA1DB7F18200C4C8E2 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentTableViewController.swift; path = ../StudentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D9CC9CCF1DB7D40600C4C8E2 /* StudentPutApi */ = {
 			isa = PBXGroup;
 			children = (
+				D9CC9CEA1DB7F18200C4C8E2 /* StudentTableViewController.swift */,
 				D9CC9CE61DB7DC7B00C4C8E2 /* NetworkController.swift */,
 				D9CC9CD01DB7D40600C4C8E2 /* AppDelegate.swift */,
 				D9CC9CD41DB7D40600C4C8E2 /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				D9CC9CD11DB7D40600C4C8E2 /* AppDelegate.swift in Sources */,
 				D9CC9CE91DB7DCE500C4C8E2 /* StudentController.swift in Sources */,
 				D9CC9CE31DB7D8A100C4C8E2 /* Student.swift in Sources */,
+				D9CC9CEB1DB7F18200C4C8E2 /* StudentTableViewController.swift in Sources */,
 				D9CC9CE71DB7DC7B00C4C8E2 /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

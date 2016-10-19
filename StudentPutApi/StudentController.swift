@@ -19,11 +19,11 @@ class StudentController {
     
     // properties
     
-    static var baseURL = URL(string: "https://names-e4301.firebaseio.com/students")
+    static var baseURL = URL(string: "https://names-e4301.firebaseio.com/students")!
     
     
     // appending to the baseURl
-    static let getEndPoint = baseURL?.appendPathExtension("json")
+    static let getEndPoint = baseURL.appendingPathExtension("json")
     
     // methods
     
@@ -33,8 +33,7 @@ class StudentController {
         let student = Student(name: name)
         
         // add student name to url
-        guard let url = baseURL?.appendingPathComponent(name).appendingPathExtension("json") else { return }
-        
+         let url = baseURL.appendingPathComponent(name).appendingPathExtension("json")
         // call th networkcontroller to send the data to firebase
         NetworkController.preformRequest(for: url, httpMethod: .Put, body: student.jsonData) { (data, error) in
             
@@ -65,5 +64,26 @@ class StudentController {
         }
         
     }
+    static func fetchStudents(completion: @escaping ([Student]) -> Void) {
+        
+        NetworkController.preformRequest(for: StudentController.getEndPoint, httpMethod: .Get) { (data, error) in
+            
+            guard let data = data else {
+                completion([])
+                return
+            }
+            guard let studentsDict = (try? JSONSerialization.jsonObject(with: data, options: [.allowFragments])) as? [String : [String : String]]
+                else {
+                    
+                    completion([])
+                    return
+            }
+            
+            let students = studentsDict.flatMap{ Student(dictionary: $0.1) }
+            completion(students)
+        }
+        
     
+        
+    }
 }
